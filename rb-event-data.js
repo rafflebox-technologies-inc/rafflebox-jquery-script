@@ -17,8 +17,8 @@ jQuery(document).ready(function () {
           // Format data
           eventID = event.id;
           var eventName = event.name;
-          var jackpot = '$' + event.jackpotCents / 100;
-          var jackpotHalf = '$' + event.jackpotCents / 100 / 2;
+          var jackpot = '$' + event.displayJackpotCents / 100;
+          var jackpotHalf = '$' + event.displayJackpotCents / 100 / 2;
           var drawDate = new Date(event.drawDate).toLocaleDateString('en-US', {
             dateStyle: 'long',
           });
