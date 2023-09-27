@@ -3,7 +3,7 @@ $.noConflict();
 jQuery(document).ready(function () {
   // Configuration
   var eventID;
-  var raffleShortlink = 'gralaska';
+  var raffleShortlink = 'chwbrh-2023';
 
   if (raffleShortlink) {
     // Retrieve Event information
@@ -22,9 +22,17 @@ jQuery(document).ready(function () {
           var drawDate = new Date(event.drawDate).toLocaleDateString('en-US', {
             dateStyle: 'long',
           });
+          var searchParams = new URLSearchParams(window.location.search);
+
+          // Optional Campaign ID
+          var cid = searchParams.get('cid')
+            ? `&cid=${searchParams.get('cid')}`
+            : '';
+
           var checkoutLink =
             'https://checkout.rafflebox.us/goldrush?eventId=' +
             eventID +
+            cid +
             '&locale=en';
 
           // Inject data
