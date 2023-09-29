@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
             : '';
 
           var checkoutLink =
-            'https://checkout.rafflebox.us/goldrush?eventId=' +
+            'https://checkout.rafflebox.ca/raffle?eventId=' +
             eventID +
             cid +
             '&locale=en';
